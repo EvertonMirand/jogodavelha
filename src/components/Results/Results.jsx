@@ -19,20 +19,26 @@ export const Results = ({
   return (
     <div>
       <Info>Jogador atual: {currentPlayer}</Info>
-      <Info>Tempo restante: {timer}s</Info>
+      <Info data-testid="timer">Tempo restante: {timer}s</Info>
       {matchWinner && (
         <Result>
           {!winner && (
-            <p>
+            <p data-testid="match-winner">
               Resultado:{' '}
               {matchWinner === 'draw'
                 ? 'Empate'
                 : `${matchWinner} venceu a partida!`}
             </p>
           )}
-          {winner && <p>Ganhador: {`${winner} venceu!`}</p>}
+          {winner && (
+            <p data-testid="match-winner">Ganhador: {`${winner} venceu!`}</p>
+          )}
 
-          <NewMatchButton onClick={resetBoard} disabled={!!winner}>
+          <NewMatchButton
+            data-testid="new-match"
+            onClick={resetBoard}
+            disabled={!!winner}
+          >
             Nova Partida
           </NewMatchButton>
         </Result>

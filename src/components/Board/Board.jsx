@@ -17,7 +17,12 @@ export const Board = ({ board, makeMove }) => {
       <BoardWrapper>
         <BoardContainer color={colors.board}>
           {board.map((cell, index) => (
-            <Cell key={index} value={cell} onClick={() => makeMove(index)} />
+            <Cell
+              key={index}
+              value={cell}
+              onClick={() => makeMove(index)}
+              index={index}
+            />
           ))}
         </BoardContainer>
       </BoardWrapper>

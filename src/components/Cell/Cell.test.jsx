@@ -15,11 +15,11 @@ describe('Cell', () => {
           },
         }}
       >
-        <Cell value="X" onClick={() => {}} />
+        <Cell value="X" onClick={() => {}} index={1} />
       </ThemeContext.Provider>,
     );
 
-    const button = screen.getByTestId('cell');
+    const button = screen.getByTestId('cell-1');
     expect(button).toHaveStyle({ color: '#123456' });
   });
 });
