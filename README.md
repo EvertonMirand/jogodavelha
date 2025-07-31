@@ -1,7 +1,13 @@
 # Jogo da Velha
 
-Projeto desenvolvido em **React 19 + Vite**, utilizando **styled-components**, **Context API** e **hooks customizados**.  
-Inclui testes automatizados com **Jest + React Testing Library** (unitários) e **Cypress** (E2E), além de configuração de **ESLint + Prettier**.
+Implementação de um **Jogo da Velha (Tic Tac Toe)** em **React 19 + Vite**, com suporte a:
+
+- Placar de vitórias persistente
+- Personalização de cores (X, O, tabuleiro e fundo)
+- Menu flutuante arrastável
+- Jogada automática quando o tempo do jogador expira
+- Testes unitários (Jest + RTL) e end‑to‑end (Cypress)
+- Qualidade de código garantida com ESLint + Prettier
 
 ---
 
