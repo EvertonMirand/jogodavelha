@@ -1,6 +1,6 @@
 # Jogo da Velha
 
-Implementação de um **Jogo da Velha (Tic Tac Toe)** em **React 19 + Vite**, com suporte a:
+Implementação de um **Jogo da Velha** em **React 19 + Vite**, com suporte a:
 
 - Placar de vitórias persistente
 - Personalização de cores (X, O, tabuleiro e fundo)
