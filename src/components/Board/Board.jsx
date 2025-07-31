@@ -15,7 +15,7 @@ export const Board = ({ board, makeMove }) => {
   return (
     <div>
       <BoardWrapper>
-        <BoardContainer color={colors.board}>
+        <BoardContainer data-testid="board" color={colors.board}>
           {board.map((cell, index) => (
             <Cell
               key={index}

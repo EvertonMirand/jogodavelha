@@ -31,7 +31,7 @@ export const Results = ({
             </p>
           )}
           {winner && (
-            <p data-testid="match-winner">Ganhador: {`${winner} venceu!`}</p>
+            <p data-testid="winner">Ganhador: {`${winner} é o campeão!`}</p>
           )}
 
           <NewMatchButton

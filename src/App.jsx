@@ -26,7 +26,7 @@ function App() {
   const { colors = {} } = useContext(ThemeContext);
 
   return (
-    <Container background={colors.background}>
+    <Container data-testid="body" background={colors.background}>
       <GlobalStyle />
       <Title>Jogo da Velha</Title>
       <ScoreBoard scores={scores} resetScores={resetScores} />
