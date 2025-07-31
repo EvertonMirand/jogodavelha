@@ -27,6 +27,12 @@ npm install
 ```bash
 npm run dev
 npm run build
+```
+
+```bash
 npm run test
+```
+
+```bash
 npm run cypress:run
 ```
