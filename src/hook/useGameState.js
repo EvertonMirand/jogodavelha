@@ -53,7 +53,7 @@ export function useGameState() {
       const newBoard = [...board];
       newBoard[index] = currentPlayer;
       setBoard(newBoard);
-      setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
+      setCurrentPlayer((oldValue) => (oldValue === 'X' ? 'O' : 'X'));
       setTimer(5);
     },
     [board, currentPlayer, matchWinner],
