@@ -26,6 +26,7 @@ export function FloatingMenu() {
 
   return (
     <Menu
+      data-testid="floating-menu"
       positionTop={position.y}
       positionLeft={position.x}
       onMouseMove={onMouseMove}
@@ -34,6 +35,7 @@ export function FloatingMenu() {
       onTouchEnd={onTouchEnd}
     >
       <div
+        data-testid="floating-menu-header"
         className="header"
         role="button"
         onMouseDown={onMouseDown}
@@ -42,17 +44,29 @@ export function FloatingMenu() {
       >
         <h3>Personalizar cores</h3>
       </div>
-      <InputColor label="X" onChangeValue={changeXColor} value={X} />
-      <InputColor label="O" onChangeValue={changeOColor} value={O} />
+      <InputColor
+        label="X"
+        onChangeValue={changeXColor}
+        value={X}
+        data-testid="input-x"
+      />
+      <InputColor
+        label="O"
+        onChangeValue={changeOColor}
+        value={O}
+        data-testid="input-o"
+      />
       <InputColor
         label="Tabuleiro"
         onChangeValue={changeBoardColor}
         value={board}
+        data-testid="input-board"
       />
       <InputColor
         label="Fundo"
         onChangeValue={changeBackgroundColor}
         value={background}
+        data-testid="input-background"
       />
     </Menu>
   );
