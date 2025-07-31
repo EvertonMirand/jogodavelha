@@ -10,6 +10,7 @@ export function Cell({ value, onClick }) {
 
   return (
     <Button
+      data-testid="cell"
       onClick={onClick}
       disabled={!!value}
       color={colors[value]}
