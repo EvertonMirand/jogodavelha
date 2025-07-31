@@ -10,12 +10,14 @@ import { Button, Container, Title } from './styled';
  */
 export const ScoreBoard = ({ scores, resetScores }) => {
   return (
-    <Container>
+    <Container data-testid="scoreboard">
       <Title>Placar</Title>
-      <p>
+      <p data-testid="score-text">
         X: {scores.X} | O: {scores.O}
       </p>
-      <Button onClick={resetScores}>Zerar Placar</Button>
+      <Button data-testid="reset-score" onClick={resetScores}>
+        Zerar Placar
+      </Button>
     </Container>
   );
 };
