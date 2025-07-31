@@ -1,11 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BoardWrapper = styled.div`
+  display: flex;
+
+  justify-content: center;
+  margin: 20px auto;
+`;
+
+export const BoardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 100px);
   gap: 5px;
-  justify-content: center;
-  margin: 20px auto;
+  background: ${({ color }) => color};
 `;
 
 export const Info = styled.p`
@@ -21,5 +27,11 @@ export const Result = styled.div`
     padding: 6px 12px;
     font-size: 0.9rem;
     cursor: pointer;
+  }
+`;
+
+export const NewMatchButton = styled.button`
+  &:disabled {
+    cursor: not-allowed;
   }
 `;

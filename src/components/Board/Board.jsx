@@ -1,26 +1,26 @@
-import { BoardWrapper, Info, Result } from "./styled";
+import { useContext } from 'react';
+import { Cell } from '../Cell/Cell';
+import { BoardContainer, BoardWrapper } from './styled';
+import { ThemeContext } from '../../context/ThemeContext';
 
-export const Board = ({
-  board,
-  currentPlayer,
-  makeMove = ()=>{},
-  timer,
-  winner,
-  resetBoard,
-}) => {
-    <div >
+/**
+ * @param {{
+ *   board: (string|null)[],
+ *   makeMove: (index:number) => void,
+ * }} props
+ */
+export const Board = ({ board, makeMove }) => {
+  const { colors } = useContext(ThemeContext);
+
+  return (
+    <div>
       <BoardWrapper>
-        {board.map((cell, index) => (
-          <Cell key={index} value={cell} onClick={() => makeMove(index)} />
-        ))}
+        <BoardContainer color={colors.board}>
+          {board.map((cell, index) => (
+            <Cell key={index} value={cell} onClick={() => makeMove(index)} />
+          ))}
+        </BoardContainer>
       </BoardWrapper>
-      <Info>Jogador atual: {currentPlayer}</Info>
-      <Info>Tempo restante: {timer}s</Info>
-      {winner && (
-        <Result>
-          <p>Resultado: {winner === "draw" ? "Empate" : `${winner} venceu!`}</p>
-          <button onClick={resetBoard}>Nova Partida</button>
-        </Result>
-      )}
     </div>
+  );
 };
